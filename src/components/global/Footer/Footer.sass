@@ -1,5 +1,13 @@
 .footer
-	.col-left
+	.footer-list
+		display: grid
+		grid-template-columns: 1.8fr 6.8fr 2.2fr
+		gap: 80px
+		@media (max-width: 1279.98px)
+			gap: 40px
+		@media (max-width: 767.98px)
+			@apply grid-cols-1
+		
 		ul.footer-social-link 
 			@apply flex items-center gap-3
 			li
@@ -8,15 +16,13 @@
 					@apply border border-Neutral-500-main
 					i
 						@apply text-Neutral-500-main font-normal
-	.col-right
-		.footer-col-main
-			@apply relative
-			&::before
-				
-				content: ""
-				@apply absolute top-0 bottom-0 right-[-2.8rem] w-[1px] bg-Neutral-300
 		ul.footer-nav 
 			@apply flex items-center justify-between
+
+			@media (max-width: 1279.98px)
+				@apply flex-wrap gap-4 justify-start
+			@media (max-width: 767.98px)
+				@apply flex-col items-start
 			li
 				a
 					@apply rem:text-[16px] font-bold text-Neutral-950 hover:text-Primary-3   overflow-hidden inline-block
@@ -29,8 +35,26 @@
 					&:hover
 						span
 							@apply lg:-translate-y-full
+		
+	
+		.footer-column
+			&:nth-child(2)
+				
+				@apply relative
+				&::before
+					
+					content: ""
+					@apply absolute top-0 bottom-0 right-[-2.2rem] w-[1px] bg-Neutral-300
+			@media (max-width: 767.98px)
+				&:nth-child(2)
+					&::before					
+						content: none
+					
+		
 		.footer-contact
-			@apply flex flex-col justify-between
+			@apply flex flex-col justify-between h-full
+			@media (max-width: 767.98px)
+				@apply gap-3
 			.item
 				@apply flex flex-col gap-1 text-Neutral-950
 				span
@@ -48,42 +72,7 @@
 						@apply absolute top-0 right-0 
 						button
 							@apply w-10 h-10 bg-Primary-3 inline-flex items-center justify-center text-Neutral-White
-@media (max-width: 1279.98px)
-	.footer
-		.col-right
-			ul.footer-nav 
-				@apply grid grid-cols-3 gap-3
-			.footer-col-main
-				@apply w-[33rem]
-			.footer-contact
-				@apply w-[calc(100%-33rem)]
-@media (max-width: 1023.98px)
-	
-	.footer
-		.col-right
-			@apply w-full
-@media (max-width: 767.98px)
-	.footer
-		.footer-main
-			@apply gap-10 
-		.col-left
-			.footer-social 
-				@apply mt-5
-		.col-right
-			@apply flex-col w-full gap-10
-			ul.footer-nav 
-				@apply flex flex-col gap-3 items-start
-				li
-					a
-						@apply text-[14px]
-			.footer-col-main 
-				@apply w-full
-				&::before
-					content: none
-			.footer-about 
-				@apply mt-5
-			.footer-contact 
-				@apply w-full gap-3
-		.footer-bottom
-			.footer-bottom-main 
+	.footer-bottom
+		.footer-bottom-main
+			@media (max-width: 767.98px)
 				@apply flex-col

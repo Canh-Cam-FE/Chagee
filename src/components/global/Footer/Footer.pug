@@ -1,8 +1,8 @@
 footer.footer
 	.footer-top(class="lg:py-15 py-10 bg-Neutral-50")
 		.container 
-			.footer-main(class="flex flex-col lg:flex-row rem:gap-[72px]")
-				.col-left(class="rem:w-[200px]")
+			.footer-list
+				.footer-column 
 					.footer-logo(class="rem:w-[131px]") 
 						a(href="#" class="img-ratio ratio:pt-[104_131]")
 							img(src="./img/logo-footer.png", alt="") 
@@ -14,37 +14,36 @@ footer.footer
 									i.fa-brands.fa-facebook-f
 							li 
 								a(href="#")
-									i.fa-brands.fa-facebook-f
+									i.fa-brands.fa-tiktok
 							li 
 								a(href="#")
-									i.fa-brands.fa-facebook-f
+									i.fa-brands.fa-instagram
 							li 
 								a(href="#")
-									i.fa-brands.fa-facebook-f
-				.col-right(class="w-[calc(100%-10.416666666666668rem-3.75rem)] flex rem:gap-[109px]")
-					.footer-col-main(class="rem:w-[780px]")
-						.footer-menu 
-							ul.footer-nav 							
-								li 
-									a(href="./home.html") 
-										span(data-hover="VỀ CHÚNG TÔI") VỀ CHÚNG TÔI
-								li 
-									a(href="./home.html") 
-										span(data-hover="LÀM VIỆC TẠI CHAGEE") LÀM VIỆC TẠI CHAGEE
-								li 
-									a(href="./home.html") 
-										span(data-hover="CƠ HỘI NGHỀ NGHIỆP") CƠ HỘI NGHỀ NGHIỆP
-								li 
-									a(href="./home.html") 
-										span(data-hover="HỆ THỐNG CỬA HÀNG") HỆ THỐNG CỬA HÀNG
-								li 
-									a(href="./home.html") 
-										span(data-hover="LIÊN HỆ") LIÊN HỆ
-						.footer-about(class="rem:mt-[118px]")
-							h3(class="text-32 font-bold text-Neutral-950 mb-3") Về CHAGEE
-							.desc(class="text-Neutral-950 font-normal") Thương hiệu trà sữa tươi trứ danh toàn cầu, đã chính thức đặt chân đến Việt Nam, mang theo sứ mệnh lan tỏa hương vị trà hảo hạng và trải nghiệm độc đáo đến những người yêu trà Việt.
-					
-					.footer-contact(class="w-[calc(100%-40.625rem-5.677083333333334rem)]")
+									i.fa-brands.fa-linkedin-in
+				.footer-column 
+					.footer-menu 
+						ul.footer-nav 							
+							li 
+								a(href="./home.html") 
+									span(data-hover="VỀ CHÚNG TÔI") VỀ CHÚNG TÔI
+							li 
+								a(href="./home.html") 
+									span(data-hover="LÀM VIỆC TẠI CHAGEE") LÀM VIỆC TẠI CHAGEE
+							li 
+								a(href="./home.html") 
+									span(data-hover="CƠ HỘI NGHỀ NGHIỆP") CƠ HỘI NGHỀ NGHIỆP
+							li 
+								a(href="./home.html") 
+									span(data-hover="HỆ THỐNG CỬA HÀNG") HỆ THỐNG CỬA HÀNG
+							li 
+								a(href="./home.html") 
+									span(data-hover="LIÊN HỆ") LIÊN HỆ
+					.footer-about(class="lg:rem:mt-[118px] mt-10")
+						h3(class="text-32 font-bold text-Neutral-950 mb-3") Về CHAGEE
+						.desc(class="text-Neutral-950 font-normal") Thương hiệu trà sữa tươi trứ danh toàn cầu, đã chính thức đặt chân đến Việt Nam, mang theo sứ mệnh lan tỏa hương vị trà hảo hạng và trải nghiệm độc đáo đến những người yêu trà Việt.
+				.footer-column 
+					.footer-contact
 						.item 
 							span Hotline:
 							a(href="#") 099 242 6534
@@ -64,6 +63,7 @@ footer.footer
 				.footer-copyright © 2025 CHAGEE VIỆT NAM. All Rights Reserved.
 				.footer-link 
 					a(href="#") Chính sách người dùng 
+	
 #popup-form.popup-form(style="display: none;" data-fancybox-modal)
 	.popup-content 
 		.popup-main(class="flex flex-col md:flex-row")
