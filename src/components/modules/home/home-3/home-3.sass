@@ -1,0 +1,12 @@
+.home-3
+	.home-3-list
+		.item
+			@apply md:even:-translate-y-10 even:-translate-y-0
+			.image
+				@apply relative
+				.content
+					@apply text-center text-Neutral-White pt-20 px-6 pb-10 absolute bottom-0 z-2 w-full
+					&::before
+						content: ""
+						background: linear-gradient(180deg, rgba(11, 30, 57, 0.00) 0%, #0B1E39 100%)
+						@apply absolute left-0 -z-2 flex flex-col justify-end pointer-events-none h-full w-full rounded-bl-lg rounded-br-lg bottom-0

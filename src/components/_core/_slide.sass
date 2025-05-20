@@ -1,0 +1,20 @@
+.wrap-button-slide
+	display: flex
+	align-items: center
+	justify-content: center
+	@apply gap-5 xl:gap-0
+	.btn-prev,.btn-next
+		z-index: 9
+		position: static
+		cursor: pointer
+		position: absolute !important
+		top: 50%
+		transform: translateY(-50%)
+		&.swiper-button-lock
+			@apply hidden
+	.btn-prev
+		left: -6rem
+
+	.btn-next
+		right: -6rem
+

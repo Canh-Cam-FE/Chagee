@@ -1,0 +1,101 @@
+header.header
+	form.search-bar-container(action="", class="")
+		.searchbox(class="w-full relative cursor-pointer") 
+			input#search-btn(type="text", class="searchinput", placeholder="Tìm kiếm...", class="px-4 py-2 rounded bg-Neutral-White shadow-lg w-full cursor-pointer")
+			.search-icon(class="absolute top-2/4 -translate-y-2/4 right-0 pr-5 text-Primary-Primary_01")
+				i.fa-sharp.fa-regular.fa-magnifying-glass
+	//- .header-bar-mobile
+	//- 	.header-bar 
+	//- 		i.fa-solid.fa-bars
+	//- .header-search 
+	//- 	i.fa-regular.fa-magnifying-glass
+	.container 
+		.header-main(class="xl:flex hidden items-center justify-between")
+			.header-logo(class="rem:w-[132px]")
+				a(href="#" class="img-ratio")
+					img(src="./img/logo.png", alt="") 
+			.header-menu(class="flex items-center justify-between h-full")
+				ul.header-nav
+					li
+						a(href="./home.html") 
+							span(data-hover="TRANG CHỦ") TRANG CHỦ
+					li.menu-item-has-children
+						a(href="./home.html") 
+							span(data-hover="VỀ CHÚNG TÔI") VỀ CHÚNG TÔI
+						ul.sub-menu 
+							li 
+								a(href="#") Chuyện người ở CHAGEE
+							li 
+								a(href="#")  Cuộc sống ở CHAGEE 
+					li.menu-item-has-children
+						a(href="./home.html") 
+							span(data-hover="LÀM VIỆC TẠI CHAGEE") LÀM VIỆC TẠI CHAGEE
+						ul.sub-menu 
+							li 
+								a(href="#") Chuyện người ở CHAGEE
+							li 
+								a(href="#")  Cuộc sống ở CHAGEE 
+					li 
+						a(href="./home.html") 
+							span(data-hover="CƠ HỘI NGHỀ NGHIỆP") CƠ HỘI NGHỀ NGHIỆP
+					li 
+						a(href="./home.html") 
+							span(data-hover="HỆ THỐNG CỬA HÀNG") HỆ THỐNG CỬA HÀNG
+					li 
+						a(href="./home.html") 
+							span(data-hover="LIÊN HỆ") LIÊN HỆ
+			.header-right(class="flex items-center gap-9")
+				.header-search(class="hidden xl:block cursor-pointer text-black")
+					.header-search-icon(class="text-black text-2xl") 
+						i.fa-regular.fa-magnifying-glass
+				.header-language(class="flex items-center gap-2 cursor-pointer text-Neutral-White") 
+					.icon 
+						a(href="#")
+							img(src="./img/VN.png", alt="") 
+					.wpml-ls
+						a(href="/", class="") VN
+					ul.wpml-ls-sub-menu
+						li
+							a(href="/", class="") EN
+		.header-main-mobile(class="xl:hidden flex items-center justify-between")
+			.header-language(class="flex items-center gap-2 cursor-pointer text-Neutral-950") 
+				.icon 
+					a(href="#")
+						img(src="./img/VN.png", alt="") 
+				.wpml-ls
+					a(href="/", class="") VN
+				ul.wpml-ls-sub-menu
+					li
+						a(href="/", class="") EN
+			.header-logo-mobile(class="w-[6rem] h-[72px] absolute left-2/4 -translate-x-2/4")
+				a(href="#" class="w-full h-full blocks")
+					img(src="./img/logo.png", alt="" class="w-full h-full object-cover") 
+			.header-right-mobile(class="flex items-center gap-2")
+				.header-search-mobile
+					i.fa-regular.fa-magnifying-glass
+				.header-bar-mobile
+					.header-bar 
+						i.fa-solid.fa-bars
+	.header-nav-mobile(class="block lg:hidden")
+		ul(class="flex items-center text-white")
+			li.menu-item-has-children
+				a(href="#") VỀ CHÚNG TÔI
+				ul.sub-menu 
+					li 
+						a(href="#") Chuyện người ở CHAGEE
+					li 
+						a(href="#")  Cuộc sống ở CHAGEE 
+			li
+				a(href="#") Credo
+			li
+				a(href="#") About us
+			li
+				a(href="#") Industries we serve
+			li
+				a(href="#") News
+			li
+				a(href="#") Sustainability
+			li
+				a(href="#") Careers
+			li
+				a(href="#") Contact

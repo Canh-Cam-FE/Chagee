@@ -1,0 +1,36 @@
+section.home-1(class="md:block hidden  relative")
+	.home-1-slide(class="relative")
+		.swiper.swiper-home-banner 
+			.swiper-wrapper 
+				.swiper-slide
+					.home-1-banner(class="relative")
+						a(href="#" class="img-ratio ratio:pt-[860_1920] lozad")
+							+PugImg()
+						.home-1-content(class="absolute w-full xl:rem:bottom-[120px] bottom-10 px-20")
+							h1(class="rem:text-[120px] font-bold text-Neutral-White mb-6") CHAGEE
+							.desc(class="text-2xl font-medium uppercase text-Neutral-White flex items-center justify-between") 
+								h3 
+									| Kết nối với Chagee để cùng lan toả 
+									br
+									| hương vị và giá trị tinh tế.
+								a.icon(href="#home-2" class="rem:w-[80px]")
+									.img(class="img-ratio") 
+										img(src="./img/icon.svg", alt="")
+section.home-1-mobile(class="block md:hidden relative")
+	.swiper.swiper-home-banner-mobile 
+		.swiper-wrapper
+			-for(var i = 0; i < 3; i++) 
+				.swiper-slide
+					.home-1-banner-mobile(class="relative") 
+						a(href="#" class="")
+							img(src="./img/1.jpg", alt="") 
+						.home-1-content-mobile(class="absolute h-full flex flex-col justify-end bottom-10 left-10 gap-5")
+							h1(class="text-64 text-Neutral-White") CHAGEE
+							.desc(class="text-2xl font-medium uppercase text-Neutral-White flex items-center justify-between") 
+								h3 
+									| Kết nối với Chagee để cùng lan toả 
+									br
+									| hương vị và giá trị tinh tế.
+							a.icon(href="#home-2" class="rem:w-[80px]")
+								.img(class="img-ratio") 
+									img(src="./img/icon.svg", alt="")

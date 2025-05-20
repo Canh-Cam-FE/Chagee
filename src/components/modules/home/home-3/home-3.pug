@@ -1,0 +1,15 @@
+section.home-3(class="section-py")
+	.container 
+		.heading(class="text-center")
+			h2(class="title-40 mb-6") Hành trình kiến tạo giá trị
+			.format-content(class="text-sm text-Neutral-800")
+				p Không chỉ là thức uống, CHAGEE là sự kết hợp hài hòa giữa truyền thống và đương đại, giữa kỹ thuật và cảm xúc
+		.home-3-list(class="grid md:grid-cols-3 grid-cols-2 rem:gap-[19px] md:mt-20 mt-10")
+			-for(var i = 0; i < 3; i++)
+				.item 
+					.image 
+						a(href="#" class="img-ratio ratio:pt-[580_455] rounded-lg zoom-img")
+							+PugImg() 
+						.content 
+							h3(class="text-32 font-bold text-Neutral-White mb-4") Sứ mệnh
+							.desc(class="text-sm font-normal text-Neutral-50") Tạo nên sự kết nối trong mỗi tách trà

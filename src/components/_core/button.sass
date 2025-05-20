@@ -1,0 +1,55 @@
+.btn-btn-primary
+	@apply py-3 px-6 rounded-full border border-Neutral-500-main
+	@apply flex items-center gap-3
+	&.white
+		@apply bg-Neutral-White border-none
+	&.secondary
+		@apply bg-Primary-3 text-Neutral-White hover:bg-[#C50100] border-none
+		.btn-icon
+			i
+				@apply text-Neutral-White
+	.btn-icon
+		@apply text-xl text-Neutral-500-main
+		i
+			@apply font-light
+	.icon, .icon-2
+		@apply text-Neutral-500-main flex items-center overflow-hidden w-6 h-6
+		> *
+			@apply rem:min-w-[24px] flex-center transition-all duration-500 ease-in-out h-full w-full
+
+		// Các hướng di chuyển ban đầu
+		&.to-left > *
+			@apply translate-x-0
+		&.to-right > *
+			@apply -translate-x-full
+		&.to-top > *
+			@apply translate-y-0
+		&.to-bottom > *
+			@apply -translate-y-full
+
+		// Hướng down đặc biệt
+		&.down
+			@apply flex-col
+			> *
+				@apply translate-x-0 rem:min-h-[25px]
+
+
+
+	// Hiệu ứng khi hover
+	&:hover
+		@apply bg-Primary-3 border-transparent text-Neutral-White
+		.btn-icon
+			@apply text-Neutral-White
+			i
+				@apply text-Neutral-White
+		.icon
+			&.to-left > *
+				@apply -translate-x-full
+			&.to-right > *
+				@apply translate-x-0
+			&.to-top > *
+				@apply -translate-y-full
+			&.to-bottom > *
+				@apply translate-y-0
+			&.down > *
+				@apply translate-y-0

@@ -1,0 +1,155 @@
+.header
+	@apply bg-Neutral-White sticky left-0 right-0 z-100 top-0 shadow-Dropshadow-Light
+	.header-nav
+		@apply flex justify-center items-center gap-9
+		li
+			a
+				@apply rem:text-[16px] font-medium text-Neutral-950 hover:text-Primary-3   overflow-hidden inline-block
+				span
+					transition: transform 500ms
+					@apply inline-block relative rem:text-[16px] 
+					&::after
+						content: attr(data-hover)
+						@apply absolute top-full left-0 translate-y-0  rem:text-[16px] 
+				&:hover
+					span
+						@apply lg:-translate-y-full
+			&.menu-item-has-children
+				@apply relative 
+				&>a
+					@apply relative flex items-center justify-between
+					
+					&.dropdown-active
+						&::after
+							@apply rotate-180
+					&::after
+						content: '\f0d7'
+						@apply font-awesome font-black text-lg 
+				ul.sub-menu
+					@apply flex flex-col opacity-0 invisible rounded-lg transition-300 z-10 absolute top-[4rem] left-0 rem:w-[340px] pointer-events-none overflow-hidden bg-Neutral-White
+					li
+						a
+							@apply text-Neutral-500-main font-medium rem:text-[16px] hover:text-Primary-3
+							@apply py-3 px-6
+				&:hover
+					ul.sub-menu
+						@apply opacity-100 pointer-events-auto visible
+			&[class*='children']
+				>a
+					@apply flex items-center gap-2
+				&:hover
+					
+					@apply relative
+					&::before
+						content: ''
+						@apply absolute top-full h-[200%] w-full z-40
+			&[class*='current']
+				&>a
+					@apply text-Primary-3
+	.header-right
+		.header-search
+			@apply w-5 flex items-center justify-center
+		.header-language
+			@apply relative flex items-center rem:gap-[15px] ml-[15px] lg:ml-0
+			.wpml-ls
+				a
+					@apply text-base font-medium relative flex items-center gap-2 text-black
+					&::after
+						
+						content: '\f0d7'
+						@apply font-awesome text-black rem:text-[16px] font-black flex-shrink-0 transition-all duration-300
+			.wpml-ls-sub-menu
+				@apply absolute top-full right-0 bg-white p-1 rounded-sm shadow-lg opacity-0 invisible transition-all duration-300 ease-out transform origin-top-right scale-95
+				li
+					a
+						@apply text-center font-bold text-black block text-base hover:bg-gray-100 p-1 rounded-sm transition-colors duration-200 leading-none
+			&:hover
+				.wpml-ls-sub-menu
+					@apply opacity-100 visible translate-y-0
+	.header-bar
+		@apply w-12 h-12 flex-shrink-0 
+		@apply inline-flex items-center justify-center 
+		@apply text-Neutral-White bg-Primary-3 backdrop-blur-sm text-2xl
+	.header-search-mobile
+		@apply w-12 h-12 flex-shrink-0 
+		@apply inline-flex items-center justify-center 
+		@apply text-Neutral-White bg-Primary-3 backdrop-blur-sm text-2xl
+	.search-bar-container
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		padding: 1.5rem 15px
+		display: flex
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05)
+		background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75))
+		background-size: cover
+		backdrop-filter: blur(5px) !important
+		height: 100vh
+		width: 100%
+		align-items: center
+		flex-direction: column
+		z-index: 1001
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s ease-in-out, visibility 0s 0.3s
+
+.search-bar-container.active
+	opacity: 1
+	visibility: visible
+	transition: opacity 0.3s ease-in-out, visibility 0s
+@media (max-width: 1279.98px)
+	.header
+		@apply bg-Neutral-White
+		.header-main-mobile 
+			@apply h-[80px]
+			.header-language
+				
+				@apply relative flex items-center rem:gap-[15px] lg:ml-0
+				.wpml-ls
+					a
+						@apply text-base font-medium relative flex items-center gap-2 text-black
+						&::after
+							
+							content: '\f0d7'
+							@apply font-awesome text-black rem:text-[16px] font-black flex-shrink-0 transition-all duration-300
+				.wpml-ls-sub-menu
+					@apply absolute top-full right-0 bg-white p-1 rounded-sm shadow-lg opacity-0 invisible transition-all duration-300 ease-out transform origin-top-right scale-95
+					li
+						a
+							@apply text-center font-bold text-black block text-base hover:bg-gray-100 p-1 rounded-sm transition-colors duration-200 leading-none
+				&:hover
+					.wpml-ls-sub-menu
+						@apply opacity-100 visible translate-y-0
+	body.isOpenMenu
+		.header-nav-mobile
+			@apply translate-x-0
+	.header-nav-mobile
+		transition-duration: .5s
+		transition-property: transform
+		transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1)
+		height: calc(100dvh - var(--header-height))
+		@apply left-0 top-[var(--header-height)] w-full fixed
+		@apply translate-x-full bg-Neutral-White z-999 overflow-y-auto overflow-hidden
+		ul
+			@apply flex flex-col items-stretch w-full
+			li
+				a
+					@apply text-Neutral-950 py-4 px-[15px] flex items-center text-[16px]
+				&.menu-item-has-children
+					@apply relative 
+					&>a
+						@apply relative flex items-center justify-between
+						
+						&.dropdown-active
+							&::after
+								@apply rotate-180
+						&::after
+							content: '\f0d7'
+							@apply font-awesome font-black text-lg 
+					ul.sub-menu
+						@apply bg-black/15
+				&[class*='current']
+					&>a
+						@apply text-Primary-3
+		
