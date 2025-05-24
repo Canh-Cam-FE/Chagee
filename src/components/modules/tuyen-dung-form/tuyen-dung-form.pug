@@ -1,0 +1,139 @@
+section.section-page-recruitment-form(class="section-py")
+	.container
+		form.wrap-form-recruitment.form-style-general
+			.title(class="title-40 mb-base text-Primary-S1") Form thông tin ứng tuyển
+			.wrap-form(class="flex flex-col py-10 lg:px-16 px-5 shadow-Dropshadow-Light rounded-5")
+				table(class="basic-information")
+					tr 
+						td 
+							label(for="name") Vị trí tuyển dụng
+						td
+							.form-group
+								input(type="text", name="name" value="Nhân viên phục vụ" disabled)
+					tr 
+						td 
+							label(for="name") Họ và tên *
+						td
+							+inputText('Họ và tên', false, 'fullname')
+					tr 
+						td 
+							label(for="name") Ngày sinh *
+						td
+							.form-group.input-date-picker
+								input(id="calendar" type="text" placeholder="Chọn ngày" name="birthday" required)
+					tr 
+						td 
+							label(for="name") Giới tính *
+						td
+							+inputSelect('Giới tính', false, 'gender')
+					tr 
+						td 
+							label(for="name") Số điện thoại *
+						td
+							+inputText('Số điện thoại', false, 'phone')
+					tr 
+						td 
+							label(for="name") Email *
+						td
+							+inputText('Email', false, 'email')
+					tr 
+						td 
+							label(for="name") Địa điểm
+						td
+							table(class="w-full wrap-table-3-columns")
+								tr 
+									td 
+										label(for="name") Địa điểm làm việc mong muốn 1 *:
+									td 
+										+inputSelect('Tỉnh/Thành phố', false, 'location_province_1')
+									td 
+										+inputSelect('Quận/Huyện', false, 'location_district_1')
+							table(class="w-full wrap-table-3-columns")
+								tr 
+									td 
+										label(for="name") Địa điểm làm việc mong muốn 2:
+									td 
+										.form-group
+											select(name="location_province_2" placeholder="Tỉnh/Thành phố")
+												option(value="")
+												option(value="1") Hồ Chí Minh
+												option(value="2") Hà Nội
+												option(value="3") Đà Nẵng
+									td 
+										.form-group
+											select(name="location_district_2" placeholder="Quận/Huyện")
+												option(value="")
+												option(value="1") Quận 1
+												option(value="2") Quận 2
+												option(value="3") Quận 3
+							table(class="w-full wrap-table-3-columns")
+								tr 
+									td 
+										label(for="name") Địa điểm làm việc mong muốn 3:
+									td 
+										.form-group
+											select(name="location_province_3" placeholder="Tỉnh/Thành phố")
+												option(value="")
+												option(value="1") Hồ Chí Minh
+												option(value="2") Hà Nội
+												option(value="3") Đà Nẵng
+									td 
+										.form-group
+											select(name="location_district_3" placeholder="Quận/Huyện")
+												option(value="")
+												option(value="1") Quận 1
+												option(value="2") Quận 2
+												option(value="3") Quận 3
+					tr 
+						td 
+							label(for="name") Ứng cử viên được tuyển lại
+						td
+							+inputText('Nhập mã nhân viên cũ', false, 'old_employee_code')
+					tr 
+						td 
+							label(for="name") Nhập mã nhân viên giới thiệu
+						td
+							+inputText('Nhập mã nhân viên giới thiệu', false, 'referral_code')
+				table.table-checkbox
+					tr 
+						td 
+							label(for="name") Đăng ký nhận bản tin tuyển dụng
+						td
+							.wrap-checkboxs
+								.form-group.form-checkbox
+									input(type="radio" id="checkbox-1" name="newsletter" value="yes" required)
+									label(for="checkbox-1") Có
+								.form-group.form-checkbox
+									input(type="radio" id="checkbox-2" name="newsletter" value="no")
+									label(for="checkbox-2") Không
+					tr 
+						td 
+							label(for="name") Bạn làm được bao nhiêu ngày/tuần ?
+						td
+							.wrap-checkboxs
+								.form-group.form-checkbox
+									input(type="radio" id="checkbox-3" name="work_days" value="under_4" required)
+									label(for="checkbox-3") Dưới 4 ngày
+								.form-group.form-checkbox
+									input(type="radio" id="checkbox-4" name="work_days" value="4_to_6")
+									label(for="checkbox-4") 4 -6 ngày
+								.form-group.form-checkbox
+									input(type="radio" id="checkbox-5" name="work_days" value="7_days")
+									label(for="checkbox-5") 7 ngày
+				table(class="basic-information mt-5")
+					tr 
+						td 
+							label(for="name") Tải lên CV
+						td
+							.form-group.form-input-file
+								input(type="file" accept=".pdf,.doc,.docx" placeholder="Tải lên CV của bạn" name="cv_file" required)
+							.note(class="text-Neutral-800 mt-3") File đính kèm 1 (rar, zip, doc, docx, pdf)
+				.frm-submit(class="mt-5 flex items-center justify-between")
+					.wrap-captcha
+					.wrap-btn-submit
+						button(type="submit" class="btn btn-btn-primary secondary w-full flex-center") 
+							span Ứng tuyển ngay
+							.btn-icon.btn-lined
+								span.icon.to-right
+									i.fa-regular.fa-arrow-right
+									i.fa-regular.fa-arrow-right

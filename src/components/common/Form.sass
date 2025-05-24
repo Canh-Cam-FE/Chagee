@@ -1,0 +1,173 @@
+body
+	&>.select2-container.select2-container--default
+		@apply mt-2
+		.select2-dropdown
+			border-top: 1px solid #CFD3D4
+			box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1)
+			@apply rounded-lg border-[#CFD3D4] border bg-white p-5 #{!important}
+		.select2-search
+			@apply relative p-0 mb-3
+			input
+				@apply border border-Neutral-200 rem:h-[40px] rounded-lg
+				@apply pl-12
+			&::before
+				content: '\f002'
+				@apply inline-block
+				@apply absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none
+				@apply font-awesome text-xl text-Primary-S1 font-light
+		.select2-results
+			.select2-results__options
+				@apply rem:max-h-[309px]
+				@apply rem:pr-[10px]
+				&::-webkit-scrollbar
+					width: rr(7px)
+				&::-webkit-scrollbar-track
+					background: #F2F6F8
+					@apply rounded-full
+				&::-webkit-scrollbar-thumb
+					@apply bg-Neutral-950 rounded-full
+				.select2-results__option
+					@apply block py-2 border-b border-Neutral-50
+					@apply text-Primary-S1 text-base transition-all
+					&.select2-results__option--highlighted
+						@apply bg-transparent text-Primary-3
+					&.select2-results__option--selected
+						@apply text-Primary-3 bg-transparent  flex items-center justify-between
+						&::after
+							content: '\f058'
+							@apply font-awesome text-xl text-Primary-3 font-black
+.input-date-picker
+	@apply relative
+	input
+		background-image: url('../img/calendar.svg')
+		background-position: right 1.05rem center
+		background-repeat: no-repeat
+	.daterangepicker
+		@apply bg-white shadow-Dropshadow-Light mt-2
+		@apply rounded-lg
+		@apply absolute top-full left-0 #{!important}
+		&::before,&::after
+			@apply hidden #{!important}
+		.drp-calendar
+			@apply max-w-full w-full #{!important}
+			thead
+				tr
+					&:first-child
+						th
+							@apply py-3 border-b border-b-[#DCDCDC]
+					&:last-child
+						th
+							@apply rem:text-[10px] text-black font-normal uppercase
+			tbody
+				tr
+					td
+						&.active
+							@apply bg-Primary-3
+						&.today
+							@apply bg-Neutral-200 text-Primary-S1
+			.month
+				@apply text-base font-semibold text-[#828282]
+.form-style-general
+	button
+		.icon-search
+			@apply relative flex-center
+			i
+				@apply transition-all
+	&.is-submitting
+		button
+			.icon-search
+				&::before
+					content: ''
+					animation-duration: 0.5s
+					@apply w-5 h-5 border-3 border-white/40 border-t-white rounded-full inline-block
+					@apply absolute animate-spin
+				i
+					@apply scale-0
+	.form-group
+		input[type="text"],input[type="email"],input[type="number"]
+			@apply rounded-full w-full
+			@apply border border-Primary-S1 px-5
+			@apply text-Neutral-800 placeholder:text-Neutral-300
+			@apply transition-all
+			@apply xl:rem:h-[44px] h-[40px] outline-none
+			&:disabled
+				@apply bg-[#FAF6EE] border-[#FAF6EE] cursor-not-allowed #{!important}
+		.select2-container
+			--select2-height: 40px
+			@screen xl
+				--select2-height: 2.2916666667rem
+			@apply w-full #{!important}
+			&.select2-container--open
+				.select2-selection--single
+					.select2-selection__arrow
+						&::before
+							@apply rotate-180
+			.select2-selection--single
+				@apply h-[var(--select2-height)] #{!important}
+				@apply rounded-full border border-Primary-S1 px-5
+				.select2-selection__clear
+					@apply h-[var(--select2-height)] outline-none #{!important}
+					&::before
+						content: '\f057'
+						@apply font-awesome font-black text-Primary-3 pr-1
+					span
+						@apply hidden
+				.select2-selection__rendered
+					@apply leading-[var(--select2-height)] #{!important}
+					@apply px-0
+				.select2-selection__arrow
+					@apply h-[var(--select2-height)] #{!important}
+					@apply right-5 flex flex-col justify-center items-center
+					&::before
+						content: '\f078'
+						@apply font-awesome font-light text-Neutral-800
+					b
+						@apply hidden
+		&.form-checkbox
+			@apply flex items-center gap-2 cursor-pointer
+			input
+				@apply hidden
+				&:checked
+					&~label
+						&::before
+							content: '\f058'
+							@apply font-black text-Primary-S1
+			label
+				@apply text-Neutral-800 flex items-center gap-2 cursor-pointer
+				&::before
+					content: '\f111'
+					@apply font-awesome text-xl text-Neutral-500-main font-light
+		&.form-input-file
+			.custom-file-input
+				@apply flex items-center gap-2
+				.file-display
+					@apply rounded-full w-full flex-1
+					@apply px-5
+					@apply text-Neutral-800 border-none
+					@apply transition-all cursor-pointer
+					@apply xl:rem:h-[44px] h-[40px] outline-none
+					@apply bg-[#FAF6EE]
+				.file-upload-btn
+					@apply absolute right-4
+					&::before
+						content: '\f093'
+						@apply font-awesome text-xl text-Primary-S1 font-light
+.bookmark
+	@apply flex items-center gap-3 text-Primary-S1 cursor-pointer justify-center h-fit py-2 select-none
+	@apply relative
+	&.added
+		i
+			@apply font-black
+	i
+		@apply text-xl font-light text-Primary-S1
+	&::before
+		content: 'Đã lưu'
+		@apply absolute bottom-full left-1/2 bg-Primary-3 text-white text-xs font-semibold whitespace-nowrap px-5 py-2 rounded-full pointer-events-none
+		transform: translateX(-50%) translateY(10px) scale(0.8)
+		opacity: 0
+		transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		transform-origin: center bottom
+	&.added-motion
+		&::before
+			transform: translateX(-50%) translateY(0) scale(1)
+			opacity: 1

@@ -76,8 +76,26 @@ mixin toolFixed()
 					li 
 						a(href="") 
 							img(src="./img/social/mess-bot.png", alt="facebook", class="")
-
-				
-
-
-
+mixin inputText(placeholder="Tìm kiếm", label=false, name="tim-kiem")
+	.form-group(class=attributes.class)
+		if label
+			label(for=name)=placeholder
+		input(type="text", placeholder=placeholder name=name required)
+mixin inputSelect(placeholder="Vị trí công việc", label=false, name="vi-tri-cong-viec")
+	.form-group(class=attributes.class)
+		if label
+			label(for=name)=placeholder
+		select(name=name placeholder=placeholder required)
+			option(value="")
+			option(value="1") Quản lý nhà hàng
+			option(value="2") Nhân viên phục vụ
+			option(value="3") Đầu bếp
+			option(value="4") Thu ngân
+			option(value="5") Nhân viên bảo vệ
+mixin buttonSubmit(text="Ứng tuyển ngay")
+	button(class="btn btn-btn-primary secondary w-full flex-center") 
+		span=text
+		.btn-icon.btn-lined
+			span.icon.to-right
+				i.fa-regular.fa-arrow-right
+				i.fa-regular.fa-arrow-right

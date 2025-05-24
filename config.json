@@ -1,5 +1,24 @@
 {
-	"font": ["src/assets/fonts/**"],
-	"js": ["node_modules/jquery/dist/jquery.min.js", "plugins/Tabslet/jquery.tabslet.min.js", "node_modules/@fancyapps/ui/dist/fancybox.umd.js", "node_modules/countup.js/dist/countUp.umd.js"],
-	"css": ["node_modules/swiper/swiper-bundle.min.css", "node_modules/aos/dist/aos.css", "node_modules/@fancyapps/ui/dist/fancybox.css", "node_modules/@fancyapps/ui/dist/fancybox.css", "plugins/FontAwesome.Pro.6.1.0/css/all.min.css"]
+	"font": [
+		"src/assets/fonts/**"
+	],
+	"js": [
+		"node_modules/jquery/dist/jquery.min.js",
+		"plugins/Tabslet/jquery.tabslet.min.js",
+		"node_modules/@fancyapps/ui/dist/fancybox.umd.js",
+		"node_modules/countup.js/dist/countUp.umd.js",
+		"node_modules/select2/dist/js/select2.min.js",
+		"plugins/date-picker/moment.min.js",
+		"plugins/date-picker/daterangepicker.min.js",
+		"node_modules/jquery-validation/dist/jquery.validate.min.js"
+	],
+	"css": [
+		"node_modules/swiper/swiper-bundle.min.css",
+		"node_modules/aos/dist/aos.css",
+		"node_modules/@fancyapps/ui/dist/fancybox.css",
+		"node_modules/@fancyapps/ui/dist/fancybox.css",
+		"plugins/FontAwesome.Pro.6.1.0/css/all.min.css",
+		"node_modules/select2/dist/css/select2.min.css",
+		"plugins/date-picker/daterangepicker.css"
+	]
 }

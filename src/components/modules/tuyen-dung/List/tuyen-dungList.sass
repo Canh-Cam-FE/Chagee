@@ -1,0 +1,31 @@
+.section-page-recruitment-list
+	.wrap-form-recruitment
+		@apply grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5
+		.form-group
+			input[type="text"]
+				@apply lg:rem:h-[60px] h-[40px]
+			.select2-container
+				@screen xl
+					--select-height: 2.3958333333rem
+
+	.item-recruitment
+		+border-dashed()
+		@apply py-10
+		.tags
+			@apply flex items-center lg:gap-5 gap-[8px]
+			.tag
+				@apply rem:rounded-b-[8px] py-2 px-3 flex-center bg-Primary-S2 text-Primary-S1 lg:text-base text-[13px]
+				&.new
+					@apply bg-[#FB8600] text-white
+				&.hot
+					@apply bg-Primary-S1 text-white
+				&.urgent
+					@apply bg-Primary-3 text-white
+		.wrap-infor
+			@apply grid md:grid-cols-4 grid-cols-2 xl:gap-10 lg:gap-5 gap-[15px] gap-y-5 pt-5
+			li
+				@apply text-Neutral-800 flex items-center gap-3
+				i
+					@apply text-xl
+				&.expiration
+					@apply text-Primary-S1

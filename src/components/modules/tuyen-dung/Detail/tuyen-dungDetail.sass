@@ -1,0 +1,57 @@
+.section-page-recruitment-detail
+	.job-infor
+		ul.list-date
+			@apply flex-wrap flex md:items-center gap-y-3 flex-col md:flex-row
+			@screen md
+				li+li
+					&::before
+						content: ''
+						@apply w-[1px] rem:h-[17px] bg-Neutral-300 mx-4 inline-block
+			li
+				@apply max-md:text-[13px]
+				i
+					@apply mr-3
+	.job-jd
+		ul
+			@apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-base
+			li
+				@apply flex items-start
+				i
+					@apply text-xl font-light pt-1 w-5
+				.wrap
+					.name
+						@apply text-sm font-bold text-Neutral-500-main uppercase
+					.value
+						@apply text-Primary-S1
+	.job-content
+		.title
+			@apply rounded-1 border-l-3 border-l-Primary-S1 bg-Primary-S2
+			@apply px-5 rem:py-[10px] rem:min-h-[42px] flex-center inline-flex
+			@apply font-bold text-Primary-S1 uppercase mb-5
+	.box-policy
+		.format-content
+			ul
+				@apply flex flex-col gap-5 mb-5
+				li
+					@apply mb-0
+					&::marker
+						@apply text-xs
+	.box-form
+		input
+			@apply xl:rem:h-[36px] #{!important}
+		label
+			@apply font-bold text-Primary-S1 mb-3 text-base block
+		.select2-container
+			@screen xl
+				--select-height: 1.875rem #{!important}
+		button
+			@apply xl:rem:h-[36px] #{!important}
+	.box-other-job
+		.list-infor
+			@apply flex flex-col gap-3
+			li
+				@apply flex items-center gap-3
+		.list-other-job
+			&>li
+				+border-dashed()
+				@apply py-3

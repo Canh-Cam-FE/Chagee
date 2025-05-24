@@ -1,0 +1,84 @@
+section.section-page-recruitment-list(class="section-py xl:rem:pt-[118px]")
+	.container 
+		.text-center 
+			h1(class="title-40 mb-8 font-bold") Cơ hội nghề nghiệp ở CHAGEE
+		form.wrap-form-recruitment.form-style-general(class="shadow-Dropshadow-Light bg-white rem:rounded-b-[40px] lg:p-10 lg:px-16 p-5 is-submitting")
+			.form-group(class='md:col-span-full')
+				input(type="text", placeholder="Tìm kiếm" name="tim-kiem")
+			.form-group 
+				select(name="vi-tri-cong-viec" placeholder="Vị trí công việc")
+					option(value="")
+					option(value="1") Quản lý nhà hàng
+					option(value="2") Nhân viên phục vụ
+					option(value="3") Đầu bếp
+					option(value="4") Thu ngân
+					option(value="5") Nhân viên bảo vệ
+			.form-group
+				select(name="tinh-thanh" placeholder="Địa điểm")
+					option(value="")
+					option(value="1") Hà Nội
+					option(value="2") Đà Nẵng
+					option(value="3") Cần Thơ
+					option(value="4") Hải Phòng
+			.form-group
+				select(name="quan-huyen" placeholder="Quận") 
+					option(value="")
+					option(value="1") Quận 2
+					option(value="2") Quận 3
+					option(value="3") Quận 4
+					option(value="4") Quận 5
+			.form-group
+				select(name="hinh-thuc" placeholder="Hình thức làm việc")
+					option(value="")
+					option(value="1") Toàn thời gian
+					option(value="2") Bán thời gian
+					option(value="3") Thực tập
+					option(value="4") Theo ca
+			.frm-btn-wrap.flex-center(class='md:col-span-full')
+				button(class="btn-btn-primary btn secondary") 
+					span Tìm kiếm
+					.icon-search
+						i(class="fa-light fa-magnifying-glass text-xl")
+section.section-page-recruitment-list(class="section-py !pt-0")
+	.container 
+		.wrap-recruitment-list
+			.head-title(class="border-b border-Primary-S1")
+				div(class="flex justify-between items-center py-5 text-lg font-bold text-Primary-S1 rem:max-w-[865px] mx-auto")
+					p Vị trí công việc
+					p Địa điểm
+					p Hình thức
+			.recruitment-list
+				-for(i=0;i<5;i++)
+					.item-recruitment(class="flex md:flex-row flex-col gap-8")
+						a.img(class="rem:sq-[122px] img-full rounded-lg overflow-hidden" href="")
+							+PugImg()
+						.content(class="flex-1")
+							.title-bookmark(class="flex justify-between lg:items-center")
+								.title(class="flex lg:items-center lg:gap-base lg:flex-row flex-wrap flex-col gap-[8px]")
+									h3(class="" class="text-2xl font-bold text-Primary-S1")
+										a(href="") Nhân viên Pha chế (Full-time/Part-time)
+									.tags
+										.tag(class="") Ưu tiên
+										.tag(class="new") Mới
+										.tag(class="hot") Hấp dẫn
+										.tag(class="urgent") Gấp
+								.bookmark
+									p Lưu
+									i.fa-light.fa-bookmark
+							ul.wrap-infor
+								li.quantity
+									i.fa-light.fa-user
+									span 50 lượng: 2
+								li.salary
+									i.fa-light.fa-dollar-sign
+									span Mức lương: 7.000.000 vnđ
+								li.location
+									i.fa-light.fa-location-dot
+									span Quận 1, TP.HCM
+								li.work-type
+									i.fa-light.fa-clock
+									span Bán thời gian
+								li.expiration
+									i.fa-light.fa-calendar
+									span Hạn nộp: 30/06/2025
+

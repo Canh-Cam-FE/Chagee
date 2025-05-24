@@ -10,12 +10,14 @@ import {
 } from "./helper";
 import { header } from "./header";
 import { swiperInit } from "./swiper";
+import { form } from "./form";
 
 $(document).ready(function () {
 	setBackgroundElement();
 	header.init();
 	swiperInit();
 	buttonToTop();
+	form.init();
 	// countUpInit();
 });
 
@@ -52,16 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-setTimeout(() => {
-	Fancybox.show([
-		{
-			src: "#popup-form",
-			type: "inline",
-			dragToClose: false,
-			backdropClick: false,
-		},
-	]);
-}, 1000);
+// setTimeout(() => {
+// 	Fancybox.show([
+// 		{
+// 			src: "#popup-form",
+// 			type: "inline",
+// 			dragToClose: false,
+// 			backdropClick: false,
+// 		},
+// 	]);
+// }, 1000);
 
 /*==================== Aos Init ====================*/
 AOS.init({
