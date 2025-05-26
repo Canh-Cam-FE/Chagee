@@ -75,7 +75,7 @@ body
 				@apply transition-all
 	&.is-submitting
 		button
-			.icon-search
+			.icon-search,.icon.to-right
 				&::before
 					content: ''
 					animation-duration: 0.5s
@@ -91,7 +91,7 @@ body
 			@apply transition-all
 			@apply xl:rem:h-[44px] h-[40px] outline-none
 			&:disabled
-				@apply bg-[#FAF6EE] border-[#FAF6EE] cursor-not-allowed #{!important}
+				@apply bg-[#FAF6EE] border-[#FAF6EE] cursor-not-allowed text-Neutral-800 #{!important}
 		.select2-container
 			--select2-height: 40px
 			@screen xl

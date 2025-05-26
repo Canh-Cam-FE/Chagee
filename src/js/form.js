@@ -130,8 +130,6 @@ export const form = {
 
 		$('.wrap-form-recruitment').validate({
 			errorPlacement: function(error, element) {
-				console.log("🚀 ~ element:", element)
-				// Find the closest form-group and append error
 				const $formGroup = element.closest('.form-group');
 				if ($formGroup.length) {
 					error.appendTo($formGroup);
