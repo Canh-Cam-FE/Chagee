@@ -1,3 +1,5 @@
+.btn
+	@apply cursor-pointer select-none transition-all duration-300
 .btn-btn-primary
 	@apply py-3 px-6 rounded-full border border-Neutral-500-main
 	@apply flex items-center gap-3
@@ -26,15 +28,11 @@
 			@apply translate-y-0
 		&.to-bottom > *
 			@apply -translate-y-full
-
 		// Hướng down đặc biệt
 		&.down
 			@apply flex-col
 			> *
 				@apply translate-x-0 rem:min-h-[25px]
-
-
-
 	// Hiệu ứng khi hover
 	&:hover
 		@apply bg-Primary-3 border-transparent text-Neutral-White

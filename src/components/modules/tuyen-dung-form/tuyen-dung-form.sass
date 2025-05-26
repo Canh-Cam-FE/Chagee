@@ -1,0 +1,63 @@
+.section-page-recruitment-form
+	.form-style-general
+		.form-group
+			@apply relative
+			input[type="text"],input[type="email"],input[type="number"]
+				@apply border-Neutral-200 bg-white
+			.error
+				@apply text-red-500 text-sm font-normal
+				// @apply absolute top-full left-0
+			&.invalid
+				input
+					@apply border-red-500
+				.select2-selection--single
+					@apply border-red-500 #{!important}
+			&.valid
+				input
+					@apply border-green-500
+				.select2-selection--single
+					@apply border-green-500 #{!important}
+			.select2-container 
+				.select2-selection--single
+					@apply border-Neutral-200 bg-white
+	.wrap-form
+		&>table
+			+border-dashed(#BDBDBD)
+			&>tbody
+				&>tr
+					@media (max-width: 767.98px)
+						@apply flex flex-col
+					&>td
+						@apply pb-3 md:pb-6
+						&:first-child
+							@apply md:w-[30%]
+					&>td
+						label
+							@apply font-bold text-Primary-S1
+		.wrap-table-3-columns
+			@media (max-width: 1023.98px)
+				tr
+					@apply flex flex-col gap-3
+			td
+				@apply pb-3
+			td:nth-child(1)
+				@apply w-[1%] whitespace-nowrap pr-3
+			td:nth-child(2)
+				@apply md:pr-3
+		.wrap-checkboxs
+			@apply flex items-center flex-wrap
+	.table-checkbox
+		tr
+			&:first-child
+				td
+					@apply pt-3 md:pt-5 w-[50%]
+			td
+				&:not(:first-child)
+					@apply max-md:pt-0
+		.wrap-checkboxs
+			@apply flex items-center md:gap-base gap-3
+			.form-checkbox
+				@apply rem:min-w-[130px]
+				input
+
+		
