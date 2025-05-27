@@ -5,7 +5,21 @@ section.home-1(class="md:block hidden  relative")
 				.swiper-slide
 					.home-1-banner(class="relative")
 						a(href="#" class="img-ratio ratio:pt-[860_1920] lozad")
-							+PugImg()
+							+PugImg("./img/banner.png")
+						.home-1-content(class="absolute w-full xl:rem:bottom-[120px] bottom-10 px-20")
+							h1(class="rem:text-[120px] font-bold text-Neutral-White mb-6") CHAGEE
+							.desc(class="text-2xl font-medium uppercase text-Neutral-White flex items-center justify-between") 
+								h3 
+									| Kết nối với Chagee để cùng lan toả 
+									br
+									| hương vị và giá trị tinh tế.
+								a.icon(href="#home-2" class="rem:w-[80px]")
+									.img(class="img-ratio") 
+										img(src="./img/icon.svg", alt="")
+				.swiper-slide
+					.home-1-banner(class="relative")
+						a(href="#" class="rem:h-[860px] block lozad")
+							video(src="./img/video.mp4" autoplay muted loop playsinline class="w-full h-full object-cover")
 						.home-1-content(class="absolute w-full xl:rem:bottom-[120px] bottom-10 px-20")
 							h1(class="rem:text-[120px] font-bold text-Neutral-White mb-6") CHAGEE
 							.desc(class="text-2xl font-medium uppercase text-Neutral-White flex items-center justify-between") 

@@ -1,10 +1,17 @@
 .header
-	@apply bg-Neutral-White sticky left-0 right-0 z-100 top-0 shadow-Dropshadow-Light
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%)
+	backdrop-filter: blur(4px)
+	@apply  sticky left-0 right-0 z-100 top-0 py-6
+	.header-logo
+		img.logo-default
+			@apply block
+		img.logo-active
+			@apply hidden
 	.header-nav
 		@apply flex justify-center items-center gap-9
 		li
 			a
-				@apply rem:text-[16px] font-medium text-Neutral-950 hover:text-Primary-3   overflow-hidden inline-block
+				@apply rem:text-[16px] font-medium text-Neutral-White hover:text-Primary-3   overflow-hidden inline-block
 				span
 					transition: transform 500ms
 					@apply inline-block relative rem:text-[16px] 
@@ -47,17 +54,34 @@
 				&>a
 					@apply text-Primary-3
 	.header-right
+		.header-auth
+			.header-btn-register
+				a
+					@apply bg-Primary-3 border-none text-Neutral-White
+					i
+						@apply text-Neutral-White
+					&:hover
+						@apply bg-[#C50100]
+			.header-btn-login
+				a
+					@apply bg-Primary-S1 border-none text-Neutral-White
+					i
+						@apply text-Neutral-White
+					&:hover
+						@apply bg-[#C50100]
 		.header-search
 			@apply w-5 flex items-center justify-center
+			.header-search-icon
+				@apply text-Neutral-White
 		.header-language
 			@apply relative flex items-center rem:gap-[15px] ml-[15px] lg:ml-0
 			.wpml-ls
 				a
-					@apply text-base font-medium relative flex items-center gap-2 text-black
+					@apply text-base font-medium relative flex items-center gap-2 text-Neutral-White
 					&::after
 						
 						content: '\f0d7'
-						@apply font-awesome text-black rem:text-[16px] font-black flex-shrink-0 transition-all duration-300
+						@apply font-awesome text-Neutral-White rem:text-[16px] font-black flex-shrink-0 transition-all duration-300
 			.wpml-ls-sub-menu
 				@apply absolute top-full right-0 bg-white p-1 rounded-sm shadow-lg opacity-0 invisible transition-all duration-300 ease-out transform origin-top-right scale-95
 				li
@@ -93,14 +117,40 @@
 		opacity: 0
 		visibility: hidden
 		transition: opacity 0.3s ease-in-out, visibility 0s 0.3s
-
+	&.active
+		background-image: none
+		
+		backdrop-filter: none
+		@apply bg-Neutral-White shadow-Dropshadow-Light
+		.header-search
+			.header-search-icon
+				@apply text-Neutral-950
+		.header-nav
+			li
+				a 
+					@apply text-Neutral-950 hover:text-Primary-3   
+		.header-logo
+			img.logo-default
+				@apply hidden
+			img.logo-active
+				@apply block
+		.header-language
+			.wpml-ls
+				a
+					@apply  text-Neutral-Black
+					&::after
+						
+						content: '\f0d7'
+						@apply font-awesome text-black rem:text-[16px] font-black flex-shrink-0 transition-all duration-300
 .search-bar-container.active
 	opacity: 1
 	visibility: visible
 	transition: opacity 0.3s ease-in-out, visibility 0s
 @media (max-width: 1279.98px)
 	.header
-		@apply bg-Neutral-White
+		background-image: none		
+		backdrop-filter: none
+		@apply bg-Neutral-White shadow-Dropshadow-Light py-3
 		.header-main-mobile 
 			@apply h-[80px]
 			.header-language

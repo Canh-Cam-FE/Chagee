@@ -9,11 +9,12 @@ header.header
 	//- 		i.fa-solid.fa-bars
 	//- .header-search 
 	//- 	i.fa-regular.fa-magnifying-glass
-	.container 
+	.container-fluid
 		.header-main(class="xl:flex hidden items-center justify-between")
-			.header-logo(class="rem:w-[132px]")
-				a(href="#" class="img-ratio")
-					img(src="./img/logo.png", alt="") 
+			.header-logo(class="rem:w-[156px]")
+				a(href="#" class="img-ratio ratio:pt-[45_156]")
+					img.logo-default(src="./img/LOGO.svg", alt="") 
+					img.logo-active(src="./img/logo-active.svg", alt="")
 			.header-menu(class="flex items-center justify-between h-full")
 				ul.header-nav
 					li
@@ -46,8 +47,23 @@ header.header
 							span(data-hover="LIÊN HỆ") LIÊN HỆ
 			.header-right(class="flex items-center gap-9")
 				.header-search(class="hidden xl:block cursor-pointer text-black")
-					.header-search-icon(class="text-black text-2xl") 
+					.header-search-icon(class="text-Neutral-White text-2xl") 
 						i.fa-regular.fa-magnifying-glass
+				.header-auth(class="flex items-center gap-3")
+					.header-btn-register
+						a(href="#" class="btn-btn-primary inline-flex items-center group")
+							span Đăng ký
+							.btn-icon(class="btn-lined")
+								span(class="icon to-right") 
+									i.fa-light.fa-user
+									i.fa-light.fa-user
+					.header-btn-login
+						a(href="#" class="btn-btn-primary inline-flex items-center group")
+							span Đăng nhập
+							.btn-icon(class="btn-lined")
+								span(class="icon to-right") 
+									i.fa-regular.fa-arrow-right
+									i.fa-regular.fa-arrow-right
 				.header-language(class="flex items-center gap-2 cursor-pointer text-Neutral-White") 
 					.icon 
 						a(href="#")
