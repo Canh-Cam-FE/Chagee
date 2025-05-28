@@ -168,7 +168,7 @@ export const form = {
 			submitHandler: function(form) {
 				// Handle form submission here
 				console.log('Form is valid and ready to submit');
-				// form.submit(); // Uncomment to actually submit
+				form.submit(); // Uncomment to actually submit
 			}
 		});
 		
@@ -181,17 +181,17 @@ export const form = {
 		$('.form-group select').on('select2:clear', function() {
 			$(this).valid();
 		});
-		
+		  
 		// Add validation to file input change events
 		$('.form-input-file input[type="file"]').on('change', function() {
 			$(this).valid();
 		});
 	},
 	init: function () {
-		this.select2();
-		this.add_bookmark();
-		this.date_picker();
-		this.input_file();
-		this.validate();
+		// this.select2();
+		// this.add_bookmark();
+		// this.date_picker();
+		// this.input_file();
+		// this.validate();
 	}
 }

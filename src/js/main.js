@@ -54,16 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// setTimeout(() => {
-// 	Fancybox.show([
-// 		{
-// 			src: "#popup-form",
-// 			type: "inline",
-// 			dragToClose: false,
-// 			backdropClick: false,
-// 		},
-// 	]);
-// }, 1000);
+setTimeout(() => {
+	if (!$("#popup-form").length) return;
+	Fancybox.show([
+		{
+			src: "#popup-form",
+			type: "inline",
+			dragToClose: false,
+			backdropClick: false,
+		},
+	]);
+}, 1000);
 
 /*==================== Aos Init ====================*/
 AOS.init({
