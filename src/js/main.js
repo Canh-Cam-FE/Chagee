@@ -43,25 +43,22 @@ $(document).ready(function () {
 // }
 
 // fancyfox popup
-document.addEventListener("DOMContentLoaded", function () {
-	Fancybox.bind("[data-fancybox]", {
-		dragToClose: false,
-		backdropClick: false,
-		template: {
-			closeButton:
-				'<button class="fancybox-button fancybox-button--close" title="Close"><i class="fa-duotone fa-solid fa-xmark"></i></button>',
-		},
-	});
-});
+// document.addEventListener("DOMContentLoaded", function () {
+// 	Fancybox.bind("[data-fancybox]", {
+// 		dragToClose: false,
+// 		backdropClick: false,
+// 		template: {
+// 			closeButton:
+// 				'<button class="fancybox-button fancybox-button--close" title="Close"><i class="fa-duotone fa-solid fa-xmark"></i></button>',
+// 		},
+// 	});
+// });
 
 setTimeout(() => {
 	if (!$("#popup-form").length) return;
 	Fancybox.show([
 		{
 			src: "#popup-form",
-			type: "inline",
-			dragToClose: false,
-			backdropClick: false,
 		},
 	]);
 }, 1000);
