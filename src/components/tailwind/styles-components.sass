@@ -26,7 +26,7 @@
 				@apply md:py-10 md:px-8 p-6 bg-Neutral-White md:rounded-tr-lg md:rounded-br-lg rounded-none
 				.form-list
 					.form-group
-						@apply w-full col-span-2 lg:col-span-1 last:col-span-2
+						@apply w-full col-span-2 lg:col-span-1 last:col-span-2 mb-3
 						input
 							@apply w-full py-2 px-6 rounded-full bg-Neutral-50 h-full xl:rem:h-[46px]
 							@apply font-normal text-Neutral-500-main				
@@ -35,7 +35,8 @@
 						textarea
 							&:focus
 								@apply outline-none #{!important}
-		
+						.invalid-feedback
+							@apply text-red-600 pl-2
 				.form-submit
 					@apply flex mt-base
 					.button-primary
@@ -91,4 +92,7 @@
 			background-color: transparent
 			i
 				@apply rem:w-[20px] rem:h-[20px] text-Primary-S1 font-thin text-3xl  fill-none
-	
+	@media (max-width: 767.98px)
+		#popup-form
+			.carousel__button
+				@apply right-[1rem]

@@ -213,13 +213,13 @@ body.home
 				.wpml-ls-sub-menu
 					@apply opacity-100 visible translate-y-0
 	.header-bar
-		@apply w-12 h-12 flex-shrink-0 
+		@apply w-9 h-9 flex-shrink-0 
 		@apply inline-flex items-center justify-center 
-		@apply text-Neutral-White bg-Primary-3 backdrop-blur-sm text-2xl
+		@apply text-Neutral-White bg-Primary-3 backdrop-blur-sm text-xl
 	.header-search-mobile
-		@apply w-12 h-12 flex-shrink-0 
+		@apply w-9 h-9 flex-shrink-0 
 		@apply inline-flex items-center justify-center 
-		@apply text-Neutral-White bg-Primary-3 backdrop-blur-sm text-2xl
+		@apply text-Neutral-White bg-Primary-3 backdrop-blur-sm text-xl
 	.search-bar-container
 		position: absolute
 		top: 100%
@@ -248,9 +248,13 @@ body.home
 	.header
 		background-image: none		
 		backdrop-filter: none
-		@apply bg-Neutral-White shadow-Dropshadow-Light py-3
+		@apply bg-Neutral-White shadow-Dropshadow-Light py-0 #{!important}
 		.header-main-mobile 
 			@apply h-[80px]
+			.header-logo-mobile
+				a
+					img
+						@apply object-contain
 			.header-language
 				
 				@apply relative flex items-center rem:gap-[15px] lg:ml-0

@@ -63,6 +63,9 @@
 					@apply font-normal
 			.footer-email
 				@apply w-full
+				.input-icon
+					.invalid-feedback
+						@apply text-red-600
 				.form-group
 					@apply relative h-10
 					input
@@ -81,3 +84,6 @@
 		li
 			a
 				@apply w-12 h-12 rounded-full bg-Primary-3 text-Neutral-White inline-flex items-center justify-center text-2xl hover:bg-[#C50100]
+@media (max-width: 767.98px)
+	.social-fixed
+		@apply bottom-[12rem]
