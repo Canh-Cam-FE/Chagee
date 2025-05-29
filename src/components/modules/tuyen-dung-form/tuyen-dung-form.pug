@@ -1,3 +1,10 @@
+section.global-breadcrumb
+	.container
+		nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+			p
+				a(href="#") Trang chủ
+				span(class="separator")  | 
+				span(class="last") Về chúng tôi
 section.section-page-recruitment-form(class="section-py")
 	.container
 		form.wrap-form-recruitment.form-style-general(class="is-submitting")
@@ -130,10 +137,21 @@ section.section-page-recruitment-form(class="section-py")
 							.note(class="text-Neutral-800 mt-3") File đính kèm 1 (rar, zip, doc, docx, pdf)
 				.frm-submit(class="mt-5 flex items-center justify-between")
 					.wrap-captcha
-					.wrap-btn-submit
+					a(href="#popup-thanks" data-fancybox).wrap-btn-submit
 						button(type="submit" class="btn btn-btn-primary secondary w-full flex-center") 
 							span Ứng tuyển ngay
 							.btn-icon.btn-lined
 								span.icon.to-right
 									i.fa-regular.fa-arrow-right
 									i.fa-regular.fa-arrow-right
+#popup-thanks.popup-thanks(style="display: none;" data-fancybox-modal)
+	.popup-content 
+		.popup-main(class="flex flex-col-reverse md:flex-row bg-Primary-Red rounded-tr-3xl rounded-tl-3xl")
+			.col-left(class="md:rem:w-[360px] w-full")
+				.image 
+					a(href="#" class="img-ratio ratio:pt-[268_360] zoom-img lg:rounded-tl-lg lg:rounded-bl-lg rounded-none")
+						+PugImg() 
+			.col-right(class="md:w-[calc(100%-18.75rem)] w-full")
+				.title(class="lg:text-32 text-xl font-bold text-Primary-S1 mb-1") Ứng tuyển thành công!
+				.desc(class="lg:text-xl text-[14px] text-justify text-Primary-S1") Cảm ơn bạn đã dành thời gian ứng tuyển để trở thành một phần của CHAGEE Việt Nam. Bạn vui lòng kiểm tra email để cập nhật quá trình ứng tuyển nhé. Chúc bạn có một ngày thật nhiều năng lượng và niềm vui.
+				

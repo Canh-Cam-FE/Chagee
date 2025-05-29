@@ -49,4 +49,58 @@
 			background-color: transparent
 			svg
 				@apply rem:w-[20px] rem:h-[20px] text-Primary-S1  fill-none
-	
+	#popup-thanks
+		@apply lg:rem:w-[1040px] md:w-[48rem] w-full px-4 pt-0 lg:p-0  bg-transparent
+		.popup-content
+			@apply w-full 
+			.col-left
+				@apply rounded-3xl 
+				&:focus
+					@apply outline-none #{!important}
+				.image
+					@apply rounded-tl-lg rounded-tr-lg
+					&:focus
+						@apply outline-none #{!important}
+					a
+						img
+							@apply block
+			.col-right
+				@apply md:py-10 md:px-8 p-6 bg-Primary-S2 md:rounded-tr-lg md:rounded-br-lg rounded-none
+				.form-list
+					.form-group
+						@apply w-full col-span-2 lg:col-span-1 last:col-span-2
+						input
+							@apply w-full py-2 px-6 rounded-full bg-Neutral-50 h-full xl:rem:h-[46px]
+							@apply font-normal text-Neutral-500-main				
+							&:focus
+								@apply outline-none #{!important}
+						textarea
+							&:focus
+								@apply outline-none #{!important}
+		
+				.form-submit
+					@apply flex mt-base
+					.button-primary
+						@apply py-2 px-6
+		.carousel__button
+			position: absolute !important
+			top: 0.5rem !important
+			right: 0.5rem !important
+			width: 32px
+			height: 32px
+			background-color: transparent
+			i
+				@apply rem:w-[20px] rem:h-[20px] text-Primary-S1 font-thin text-3xl  fill-none
+	.form-group
+		.invalid-feedback
+			@apply text-red-500 text-sm font-normal
+		&.is-invalid
+			input
+				@apply border-red-500
+			.select2-selection--single
+				@apply border-red-500 #{!important}
+		&.is-valid
+			input
+				@apply border-green-500
+			.select2-selection--single
+				@apply border-green-500 #{!important}
