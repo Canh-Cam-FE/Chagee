@@ -246,17 +246,16 @@ body.home
 	transition: opacity 0.3s ease-in-out, visibility 0s
 @media (max-width: 1279.98px)
 	.header
-		background-image: none		
-		backdrop-filter: none
+		background-image: none !important
+		backdrop-filter: none !important
 		@apply bg-Neutral-White shadow-Dropshadow-Light py-0 #{!important}
 		.header-main-mobile 
-			@apply h-[80px]
+			@apply h-[70px]
 			.header-logo-mobile
 				a
 					img
 						@apply object-contain
-			.header-language
-				
+			.header-language				
 				@apply relative flex items-center rem:gap-[15px] lg:ml-0
 				.wpml-ls
 					a
