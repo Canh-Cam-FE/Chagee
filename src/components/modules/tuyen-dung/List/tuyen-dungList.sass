@@ -21,11 +21,24 @@
 					@apply bg-Primary-S1 text-white
 				&.urgent
 					@apply bg-Primary-3 text-white
+		.content
+			@apply flex flex-col justify-between gap-3
 		.wrap-infor
-			@apply grid md:grid-cols-4 grid-cols-2 xl:gap-10 lg:gap-5 gap-[15px] gap-y-5 pt-5
+			@apply grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 
+			// @apply flex justify-between flex-wrap 
+			@apply xl:gap-x-10 lg:gap-x-5 gap-x-[15px] gap-y-3
 			li
 				@apply text-Neutral-800 flex items-center gap-3
 				i
 					@apply text-xl
 				&.expiration
 					@apply text-Primary-S1
+				@screen lg
+					&.salary,&.location
+						@apply justify-center
+					&.work-type,&:nth-child(4n+4)
+						@apply justify-end
+		.title-bookmark
+			h3
+				a
+					@apply hover:text-Primary-3 transition-all duration-300

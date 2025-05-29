@@ -7,16 +7,6 @@
 			.error
 				@apply text-red-500 text-sm font-normal
 				// @apply absolute top-full left-0
-			&.invalid
-				input
-					@apply border-red-500
-				.select2-selection--single
-					@apply border-red-500 #{!important}
-			&.valid
-				input
-					@apply border-green-500
-				.select2-selection--single
-					@apply border-green-500 #{!important}
 			.select2-container 
 				.select2-selection--single
 					@apply border-Neutral-200 bg-white
@@ -35,13 +25,15 @@
 						label
 							@apply font-bold text-Primary-S1
 		.wrap-table-3-columns
+			@apply table-fixed
 			@media (max-width: 1023.98px)
 				tr
 					@apply flex flex-col gap-3
 			td
+				vertical-align: top !important
 				@apply pb-3
 			td:nth-child(1)
-				@apply w-[1%] whitespace-nowrap pr-3
+				@apply whitespace-nowrap pr-3
 			td:nth-child(2)
 				@apply md:pr-3
 		.wrap-checkboxs
@@ -50,7 +42,7 @@
 		tr
 			&:first-child
 				td
-					@apply pt-3 md:pt-5 w-[50%]
+					@apply pt-3 md:pt-5 lg:w-[50%]
 			td
 				&:not(:first-child)
 					@apply max-md:pt-0
