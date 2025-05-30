@@ -146,11 +146,11 @@ export const form = {
 				const $formGroup = $element.closest('.form-group');
 				
 				// Remove valid class and add invalid class
-				$formGroup.removeClass('valid').addClass('invalid');
+				$formGroup.removeClass('is-valid').addClass('is-invalid');
 				
 				// Handle Select2 specifically
 				if ($element.hasClass('select2-hidden-accessible')) {
-					$element.next('.select2-container').addClass('invalid');
+					$element.next('.select2-container').addClass('is-invalid');
 				}
 			},
 			unhighlight: function(element, errorClass, validClass) {
@@ -158,17 +158,17 @@ export const form = {
 				const $formGroup = $element.closest('.form-group');
 				
 				// Remove invalid class and add valid class
-				$formGroup.removeClass('invalid').addClass('valid');
+				$formGroup.removeClass('is-invalid').addClass('is-valid');
 				
 				// Handle Select2 specifically  
 				if ($element.hasClass('select2-hidden-accessible')) {
-					$element.next('.select2-container').removeClass('invalid').addClass('valid');
+					$element.next('.select2-container').removeClass('is-invalid').addClass('is-valid');
 				}
 			},
 			submitHandler: function(form) {
 				// Handle form submission here
 				console.log('Form is valid and ready to submit');
-				// form.submit(); // Uncomment to actually submit
+				form.submit(); // Uncomment to actually submit
 			}
 		});
 		
@@ -181,17 +181,16 @@ export const form = {
 		$('.form-group select').on('select2:clear', function() {
 			$(this).valid();
 		});
-		
 		// Add validation to file input change events
 		$('.form-input-file input[type="file"]').on('change', function() {
 			$(this).valid();
 		});
 	},
 	init: function () {
-		this.select2();
-		this.add_bookmark();
-		this.date_picker();
-		this.input_file();
-		this.validate();
+		// this.select2();
+		// this.add_bookmark();
+		// this.date_picker();
+		// this.input_file();
+		// this.validate();
 	}
 }
