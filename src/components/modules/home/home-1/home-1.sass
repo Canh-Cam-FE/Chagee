@@ -1,11 +1,16 @@
 .home-1
 	margin-top: calc(-1 * var(--header-height))
 	@apply h-screen
-	.home-1-banner
-		a
-			@apply h-full pt-0
-			img
+	.home-1-slide
+		@apply h-full
+		.swiper
+			@apply h-full
+			.home-1-banner
 				@apply h-full
+				a
+					@apply h-full pt-0
+					img
+						@apply h-full
 @media (max-width: 767.98px)
 	.home-1-mobile
 		.swiper
